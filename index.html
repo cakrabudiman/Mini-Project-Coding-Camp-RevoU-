@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
+
+    <div class="container">
+        <h1>Todo List</h1>
+        
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Add a todo ...">
+            <input type="date" id="dateInput">
+            <button id="addBtn"><i class="fas fa-plus"></i></button>
+        </div>
+
+        <div class="controls">
+            <select id="filterBtn" class="filter-select">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+            <button id="deleteAllBtn">DELETE ALL</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="todoTableBody">
+                    </tbody>
+            </table>
+            <div id="emptyMessage" class="empty-message">No task found</div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
